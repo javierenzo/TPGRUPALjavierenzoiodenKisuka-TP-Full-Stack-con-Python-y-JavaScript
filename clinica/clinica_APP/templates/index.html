@@ -1,37 +1,84 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clínica de optometría</title>
-    <link
-      rel="shortcut icon"
-      href="../../static/images/ojo.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="../../static/images/ojo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../static/styles/bootstrap.min.css" />
 
     <!--<link rel="stylesheet" href="{% static 'styles/estilo.css' %}" /> -->
     <link rel="stylesheet" href="../../static/styles/estilo.css" />
-  </head>
 
-  <body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            font-family: Helvetica;
+            width: 480px;
+            margin: 0 auto;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        #menu li>a {
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            min-width: 100px;
+        }
+        
+        #menu li>a:hover {
+            color: #000;
+            background-color: #eaeaea;
+        }
+        
+        #menu>li {
+            float: left;
+            text-align: center
+        }
+        
+        #menu>li>ul {
+            display: none;
+        }
+        
+        #menu>li:hover>ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
     <header class="rom">
-      <h1 id="titulo" class="text-center">Bienvenido</h1>
-      <img
-        id="logo"
-        src="{% static 'images/optometrista.png'%}"
-        style="width: 55px"
-      >
+        <h1 id="titulo" class="text-center">Bienvenido</h1>
+        <img id="logo" class="center" src="{% static 'images/optometrista.png'%}" style="width: 55px">
+        <nav>
+            <ul id="menu">
+                <li><a href="../clinica">Inicio</a></li>
+                <li><a href="../clinica/turno">Turno</a></li>
+                <li><a href="../clinica/pedido">Pedido</a></li>
+                <li><a href="../clinica/paciente">Paciente</a></li>
+            </ul>
+        </nav>
     </header>
 
 
     <div class="container w-50 d-flex justify-content-center">
-      <form action="" method="POST" class="form-inline">
-        <div class="form-group mb-2">
-          <label for="inputSector"></label>
-            <select class="custom-select my-1 mr-sm-2" id="inputSector">
+        <form class="form-inline">
+
+            <div class="form-group mb-2">
+                <label for="inputSector"></label>
+                <select class="custom-select my-1 mr-sm-2" id="inputSector">
               <option selected disabled>Escoja un sector</option>
               <option value="1">Secretaría</option>
               <option value="2">Profesional médico</option>
@@ -39,26 +86,26 @@
               <option value="4">Taller</option>
               <option value="5">Gerencia</option>
             </select>
-        </div>
+            </div>
 
-        <div class="form-group mx-sm-3 mb-2">
-          <label for="inputContraseña" class="sr-only">Contraseña: </label>
-          <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña">
-        </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputContraseña" class="sr-only">Contraseña: </label>
+                <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña">
+            </div>
 
-        <div class="form-group mx-sm-3 mb-2">
-          <button type="submit" class="btn btn-primary">Iniciar</button>
-        </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <button type="submit" class="btn btn-primary">Iniciar</button>
+            </div>
 
-      </form>
+        </form>
     </div>
 
     <footer>
-      <div>
-        Clínica de optometría
-      </div>
+        <div>
+            Clínica de optometría
+        </div>
     </footer>
 
-  </body>
+</body>
 
 </html>
