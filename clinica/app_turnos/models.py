@@ -2,15 +2,8 @@ from django.db import models
 # import paquete.modulo1
 # import app_pacientes.models
 from app_pacientes.models import Paciente
+from clinica_APP.models import Medico
 # Create your models here.
-
-
-class Medico(models.Model):
-    nombreMed = models.CharField(max_length=64)
-    apellidoMed = models.CharField(max_length=64)
-    dniMed = models.IntegerField()
-    telefonoMed = models.IntegerField()
-    
 
 class Turno(models.Model):
     fecha_turno = models.DateField()

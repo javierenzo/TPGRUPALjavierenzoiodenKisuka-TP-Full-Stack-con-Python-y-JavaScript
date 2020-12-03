@@ -14,6 +14,5 @@ class Paciente(models.Model):
 
 class HistorialMedico:
    paciente_id = models.ForeignKey(
-       Paciente, on_delete=models.CASCADE, related_name="paciente")
-
+   Paciente, on_delete=models.CASCADE, related_name="paciente")
 
