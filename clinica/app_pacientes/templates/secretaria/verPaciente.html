@@ -3,58 +3,6 @@
 {% extends "home.html" %} {% block body %}
 <!-- <a href="pacienteagregar">Agregar un nuevo paciente </a>
 <a href="{% url 'app_pacientes:home' %}">home</a> -->
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    header {
-        font-family: Helvetica;
-        width: 480px;
-        margin: 0 auto;
-    }
-    
-    ul {
-        list-style: none;
-    }
-    
-    #menu li>a {
-        background-color: grey;
-        color: white;
-        padding: 10px;
-        display: block;
-        text-decoration: none;
-        min-width: 100px;
-    }
-    
-    #menu li>a:hover {
-        color: #000;
-        background-color: #eaeaea;
-    }
-    
-    #menu>li {
-        float: left;
-        text-align: center
-    }
-    
-    #menu>li>ul {
-        display: none;
-    }
-    
-    #menu>li:hover>ul {
-        display: block;
-    }
-</style>
-<nav>
-    <ul id="menu">
-        <li><a href="../clinica">Inicio</a></li>
-        <li><a href="../clinica/turno">Turno</a></li>
-        <li><a href="../clinica/pedido">Pedido</a></li>
-        <li><a href="../clinica/paciente">Paciente</a></li>
-    </ul>
-</nav>
-
 
 <a href="{% url 'app_pacientes:agregar' %}">Agregar un nuevo paciente </a>
 
@@ -81,45 +29,45 @@
 </button>
 
 <table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
-            <th scope="col">DNI</th>
-            <th scope="col">Teléfono</th>
-            <th scope="col">Fecha de Nacimiento</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td> </td>
-            <td> </td>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">DNI</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Fecha de Nacimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td> </td>
+      <td> </td>
 
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td> </td>
-            <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td> </td>
+      <td> </td>
 
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td> </td>
-            <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+      <td> </td>
+      <td> </td>
 
-        </tr>
-    </tbody>
+    </tr>
+  </tbody>
 </table>
 {% endblock %}
 <!---</body>
